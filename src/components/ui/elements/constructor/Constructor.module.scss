@@ -1,0 +1,15 @@
+.wrapper {
+	@apply flex items-start gap-2.5;
+}
+
+@media (max-width: 1200px) {
+	.wrapper {
+		@apply flex-col gap-11;
+	}
+}
+
+@media (max-width: 800px) {
+	.wrapper {
+		@apply relative gap-1;
+	}
+}

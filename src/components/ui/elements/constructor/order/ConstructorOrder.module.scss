@@ -1,0 +1,212 @@
+.wrapper {
+	@apply flex;
+	gap: 50px;
+}
+.left,
+.right {
+	@apply w-full;
+}
+.required {
+	@apply font-bold text-gray-600 leading-md mb-4;
+	font-size: 24px;
+}
+.options {
+	@apply text-lg flex flex-col items-start gap-6;
+	counter-reset: option;
+}
+.option {
+	@apply flex items-center gap-4 leading-md;
+
+	&::before {
+		@apply bg-red-base min-w-8 max-w-8 min-h-8 max-h-8 rounded-full flex items-center justify-center font-bold text-gray-50;
+		counter-increment: option;
+		content: counter(option);
+	}
+}
+.form {
+	@apply flex flex-col gap-6 mt-6;
+}
+.field > p {
+	@apply text-gray-600;
+}
+.note,
+.policy {
+	@apply text-sm;
+}
+.note {
+	@apply mt-2.5;
+
+	> span {
+		@apply text-red-base;
+	}
+}
+.upload {
+	margin-top: 18px;
+}
+.submit {
+	@apply text-lg font-bold bg-red-base text-gray-50 mt-2 flex justify-center items-center;
+	height: 55px;
+
+	> svg {
+		@apply w-6 h-6;
+	}
+}
+.policy {
+	@apply w-full text-gray-500 mt-8 leading-md;
+	max-width: 462px;
+
+	> span {
+		@apply text-black underline underline-offset-4;
+	}
+}
+.design {
+	@apply bg-white rounded-xsm p-4 mb-10;
+	box-shadow: 0px 4px 4px rgba(205, 205, 205, 0.15);
+}
+.pick {
+	@apply leading-md font-bold text-gray-600 mb-4;
+	font-size: 24px;
+}
+.order {
+	@apply flex items-start gap-4;
+}
+.preview {
+	@apply p-1 border border-gray-200;
+}
+.info {
+	@apply flex flex-col text-lg leading-md;
+}
+.personalize {
+	@apply text-gray-600;
+}
+.number {
+	@apply text-gray-300;
+}
+.price {
+	@apply mt-10 border-t border-t-gray-200 pt-4 text-lg leading-md flex items-center justify-between gap-5;
+}
+.amount {
+	@apply text-red-base;
+}
+.players {
+	@apply flex flex-col gap-6;
+}
+.player {
+	@apply flex gap-2.5;
+}
+.index {
+	@apply text-red-base text-lg flex items-end;
+	padding-bottom: 19px;
+}
+.col {
+	@apply flex flex-col;
+	min-width: 70px;
+
+	&:nth-child(2) {
+		@apply w-full;
+
+		.value {
+			@apply justify-start;
+		}
+	}
+}
+.label {
+	@apply mb-2 text-lg text-gray-300;
+}
+.value {
+	@apply p-4 h-14 border border-gray-220 text-sm flex items-center justify-center;
+}
+
+@media (max-width: 1200px) {
+	.wrapper {
+		@apply flex-col-reverse;
+	}
+}
+
+@media (max-width: 800px) {
+	.design {
+		@apply relative;
+		height: 300px;
+	}
+	.pick {
+		@apply mb-0.5;
+		font-size: 14px;
+	}
+	.preview {
+		@apply w-fit h-fit border-none absolute top-0 bottom-0 left-0 right-0 m-auto;
+
+		> img {
+			width: 150px;
+		}
+	}
+	.info {
+		@apply flex flex-row items-center gap-1 text-xsm;
+	}
+	.price {
+		@apply absolute bottom-4 left-4 right-4;
+
+		> span {
+			@apply text-xsm;
+		}
+	}
+	.player {
+		@apply relative;
+	}
+	.label {
+		@apply pl-6;
+	}
+	.label,
+	.value,
+	.option,
+	.note,
+	.policy {
+		@apply text-xsm;
+	}
+	.value {
+		@apply h-10 py-0 px-4;
+	}
+	.index {
+		@apply p-0 absolute left-0 rounded-full bg-red-base text-white flex items-center justify-center text-xsm;
+		width: 17px;
+		height: 17px;
+	}
+	.required {
+		font-size: 14px;
+	}
+	.option {
+		@apply gap-2;
+
+		&::before {
+			@apply text-xsm;
+			min-width: 17px;
+			max-width: 17px;
+			min-height: 17px;
+			max-height: 17px;
+		}
+	}
+	.submit {
+		@apply mt-0 h-12 text-xsm;
+
+		> svg {
+			@apply w-6 h-6;
+		}
+	}
+	.policy {
+		@apply mt-4;
+	}
+	.wrapper {
+		@apply gap-5;
+	}
+	.upload {
+		@apply mt-0;
+	}
+}
+
+@media(max-width: 600px) {
+	.col {
+		min-width: auto;
+	}
+	.value {
+		@apply px-2;
+	}
+}

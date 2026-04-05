@@ -1,0 +1,111 @@
+.navigation {
+	max-width: 100px;
+	min-width: 100px;
+}
+.construct {
+	@apply w-full border border-gray-200 p-1.5 flex flex-col items-center justify-center gap-1 transition-colors;
+	margin-bottom: 22px;
+	box-shadow: 0 2px transparent;
+	transition: 200ms ease-out box-shadow;
+
+	&.active {
+		box-shadow: 0 2px #7f1a4b;
+	}
+
+	> img {
+		max-width: 100%;
+	}
+}
+.heading {
+	@apply text-gray-400 text-xsm mb-2.5;
+}
+.items {
+	@apply flex flex-col gap-4;
+}
+.item,
+.construct {
+	@apply w-full;
+	min-height: 130px;
+	max-height: 130px;
+}
+.button {
+	@apply w-full h-full bg-gray-100;
+	box-shadow: 0 2px transparent;
+	transition: 200ms ease-out box-shadow;
+
+	&.active {
+		box-shadow: 0 2px #7f1a4b;
+	}
+
+	> img {
+		@apply image-like-bg-contain;
+	}
+}
+
+@media (max-width: 1400px) {
+	.navigation {
+		@apply overflow-auto;
+		object-position: top;
+		object-fit: cover;
+		min-height: 140px;
+		max-height: 140x;
+	}
+	.navigation,
+	.items {
+		@apply w-full flex flex-row gap-5;
+		min-width: auto;
+		max-width: none;
+	}
+	.item,
+	.construct {
+		@apply w-full m-0;
+		min-width: 125px;
+		max-width: 125px;
+	}
+	.heading {
+		@apply hidden;
+	}
+}
+
+@media (max-width: 1200px) {
+	.navigation {
+		@apply justify-center;
+		min-height: 115px;
+		max-height: 115x;
+	}
+	.item,
+	.construct {
+		@apply w-full m-0;
+		min-width: 80px;
+		max-width: 80px;
+		min-height: 103px;
+		max-height: 103px;
+	}
+	.heading {
+		@apply hidden;
+	}
+	.construct {
+		@apply justify-start;
+
+		> img {
+			@apply w-auto;
+
+			&:first-child {
+				max-height: 48px;
+			}
+			&:last-child {
+				max-height: 40px;
+			}
+		}
+	}
+	.button > img {
+		object-position: top;
+		object-fit: cover;
+	}
+}
+
+@media (max-width: 800px) {
+	.navigation {
+		@apply hidden;
+	}
+}

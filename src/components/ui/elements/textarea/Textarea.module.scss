@@ -1,0 +1,21 @@
+.field {
+	@apply w-full;
+}
+.label {
+	@apply text-lg flex text-gray-300 mb-3;
+}
+.textarea {
+	@apply w-full p-5 border border-gray-220 bg-gray-50 outline-none resize-y;
+	min-height: 130;
+	max-height: 200px;
+}
+
+@media(max-width: 800px) {
+	.label,
+	.field {
+		@apply text-xsm;
+	}
+	.textarea {
+		@apply p-4;
+	}
+}

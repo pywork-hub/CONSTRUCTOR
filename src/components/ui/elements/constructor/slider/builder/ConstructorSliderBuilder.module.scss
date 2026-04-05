@@ -1,0 +1,201 @@
+.box {
+	@apply flex flex-col justify-center items-center gap-12 px-1.5;
+	padding-top: 75px;
+}
+.shirts,
+.shorts {
+	@apply flex items-start;
+}
+.shirts {
+	@apply gap-16;
+}
+.shorts {
+	gap: 130px;
+}
+.shirt,
+.short {
+	@apply relative;
+}
+.logo,
+.smallLogo,
+.bigLogo,
+.number,
+.bigNumber,
+.lastName,
+.shortsLogo {
+	@apply absolute;
+}
+.shirt.last .logo,
+.lastName,
+.shirt .number,
+.bigNumber,
+.bigLogo {
+	@apply w-fit left-0 right-0 mx-auto;
+}
+.number {
+	@apply text-5lg;
+	letter-spacing: 0.05em;
+}
+.shirt .number {
+	top: 70px;
+}
+.short .number {
+	bottom: 20px;
+	right: 10px;
+}
+.shirt.first .logo {
+	@apply left-0 right-0 mx-auto;
+	top: 125px;
+	width: 52px;
+}
+.short.first .logo {
+	bottom: 28px;
+	left: 12px;
+	width: 52px;
+}
+.shirt.last .logo {
+	bottom: 95px;
+	width: 69px;
+}
+.lastName {
+	@apply whitespace-nowrap text-6lg;
+	top: 11%;
+}
+.bigNumber {
+	@apply text-2xl;
+	top: 68px;
+}
+.shortsLogo {
+	bottom: 45px;
+	left: 16px;
+}
+.smallLogo {
+	top: 65px;
+	right: 55px;
+}
+.bigLogo {
+	top: 130px;
+}
+
+@media(max-width: 1400px) {
+	.shirt.last .logo {
+		bottom: 85px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.box {
+		@apply gap-4;
+		padding-top: 60px;
+	}
+	.shorts {
+		gap: 125px;
+	}
+	.shirt {
+		max-width: 185px;
+
+		.number {
+			top: 50px;
+		}
+
+		&.first .logo {
+			top: 105px;
+			width: 41px;
+		}
+
+		&.last .logo {
+			width: 54px;
+			bottom: 70px;
+		}
+	}
+	.smallLogo {
+		top: 57px;
+		right: 50px;
+	}
+	.short {
+		max-width: 125px;
+
+		&.first .logo {
+			bottom: 23px;
+			left: 8px;
+			width: 39px;
+		}
+	}
+	.lastName {
+		font-size: 35px;
+	}
+	.bigNumber {
+		top: 58px;
+		font-size: 70px;
+	}
+}
+
+@media (max-width: 800px) {
+	.box {
+		@apply gap-4;
+		padding-top: 90px;
+	}
+	.shirts {
+		@apply gap-6;
+	}
+	.shorts {
+		@apply gap-10;
+	}
+	.shirt {
+		max-width: 85px;
+
+		&.first .logo {
+			width: 20px;
+			top: 45px;
+		}
+
+		&.last .logo {
+			width: 27px;
+			bottom: 35px;
+		}
+
+		.number {
+			top: 18px;
+		}
+	}
+	.lastName {
+		top: 14%;
+		font-size: 11px;
+	}
+	.bigNumber {
+		top: 22px;
+		font-size: 34px;
+	}
+	.number {
+		font-size: 20px;
+	}
+	.short {
+		max-width: 70px;
+
+		.number {
+			bottom: 9px;
+			right: 5px;
+		}
+
+		&.first .logo {
+			width: 22px;
+			bottom: 13px;
+			left: 4px;
+		}
+	}
+	.shortsLogo {
+		width: 16px;
+		bottom: 23px;
+		left: 9px;
+	}
+	.smallLogo {
+		width: 16px;
+		top: 21px;
+		right: 20px;
+	}
+	.bigLogo {
+		@apply right-0;
+		width: 23px;
+		top: 57px;
+	}
+}

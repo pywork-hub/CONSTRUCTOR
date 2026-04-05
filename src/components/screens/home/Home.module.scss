@@ -1,0 +1,36 @@
+.wrapper {
+	@apply py-14;
+}
+.breadcrumbs {
+	@apply flex items-center text-sm;
+	margin-bottom: 50px;
+}
+.breadcrumb {
+	@apply flex items-end gap-0.5 text-gray-250;
+
+	> svg {
+		@apply w-3.5 h-3.5;
+	}
+}
+.heading {
+	@apply text-4lg uppercase mb-14 font-bold;
+}
+
+@media (max-width: 1200px) {
+	.heading {
+		@apply text-center text-xl;
+		margin: 56px 0 64px;
+	}
+}
+
+@media (max-width: 800px) {
+	.wrapper {
+		@apply py-8;
+	}
+	.breadcrumbs {
+		@apply text-xsm mb-3;
+	}
+	.heading {
+		@apply text-left text-sm mt-0 mb-5;
+	}
+}

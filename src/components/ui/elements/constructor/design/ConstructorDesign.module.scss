@@ -1,0 +1,83 @@
+.description {
+	@apply w-full leading-lg text-gray-600;
+	max-width: 815px;
+	font-size: 24px;
+}
+.form {
+	@apply flex flex-wrap gap-6 mt-14;
+}
+.field {
+	&.half {
+		max-width: calc(50% - 12px);
+	}
+
+	> p {
+		@apply text-gray-500;
+	}
+}
+.textarea {
+	@apply w-full;
+}
+.note,
+.policy {
+	@apply text-sm;
+}
+.note {
+	@apply mt-2.5;
+
+	> span {
+		@apply text-red-base;
+	}
+}
+.policy {
+	@apply w-full mt-14 text-gray-500 leading-md;
+	max-width: 460px;
+
+	> span {
+		@apply underline underline-offset-4;
+	}
+}
+.upload {
+	@apply mt-4;
+}
+.submit {
+	@apply uppercase w-full text-lg font-bold bg-red-base text-gray-50 mt-2 flex justify-center items-center;
+	height: 55px;
+
+	> svg {
+		@apply w-6 h-6;
+	}
+}
+
+@media (max-width: 1200px) {
+	.description {
+		font-size: 18px;
+	}
+	.form {
+		@apply mt-12;
+	}
+}
+
+@media (max-width: 800px) {
+	.field.half {
+		@apply max-w-full;
+	}
+	.description,
+	.note,
+	.policy {
+		@apply text-xsm;
+	}
+	.form {
+		@apply mt-7 gap-4;
+	}
+	.submit {
+		@apply h-12 text-xsm;
+
+		> svg {
+			@apply w-6 h-6;
+		}
+	}
+	.policy {
+		@apply mt-4;
+	}
+}

@@ -1,0 +1,124 @@
+.players {
+	@apply flex flex-col gap-8 mb-7;
+	counter-reset: player;
+}
+.player,
+.foot {
+	@apply pl-5;
+}
+.player {
+	@apply relative flex items-end gap-2.5;
+
+	&::before {
+		@apply text-md font-bold absolute flex items-center justify-center rounded-full bg-white;
+		counter-increment: player;
+		content: counter(player);
+		bottom: 18px;
+		left: -9px;
+		width: 23px;
+		height: 23px;
+	}
+
+	&.active::before {
+		@apply bg-red-base text-white;
+	}
+}
+.lastName {
+	@apply max-w-full;
+}
+.number {
+	max-width: 86px;
+}
+.size {
+	max-width: 91px;
+
+	> ul {
+		width: 165px;
+
+		> li {
+			max-width: calc(100% / 3 - 4px);
+		}
+	}
+}
+.sleeve {
+	max-width: 125px;
+
+	> ul {
+		@apply flex-col;
+	}
+}
+.actions {
+	@apply flex items-center gap-2;
+	margin-bottom: 18px;
+}
+.duplicate,
+.remove {
+	> svg {
+		@apply w-5 h-5;
+	}
+}
+.foot {
+	@apply flex items-center justify-between gap-5;
+}
+.count,
+.add {
+	@apply flex items-center gap-2;
+}
+.count {
+	@apply text-lg font-bold text-gray-600;
+
+	> span {
+		@apply text-red-base;
+	}
+}
+.add {
+	@apply text-red-base;
+
+	> svg {
+		@apply w-5 h-5 rotate-45;
+	}
+}
+.size,
+.sleeve {
+	> button {
+		@apply px-3.5 gap-1;
+	}
+}
+
+@media (max-width: 800px) {
+	.player {
+		@apply flex-wrap pl-0 m-0 gap-x-2.5 gap-y-5;
+
+		&::before {
+			@apply text-xsm bottom-auto top-0 left-0;
+			width: 17px;
+			height: 17px;
+			width: 17px;
+			height: 17px;
+		}
+
+		> div:first-child > p {
+			@apply pl-6;
+		}
+	}
+	.number,
+	.sleeve {
+		@apply max-w-full;
+	}
+	.size {
+		max-width: calc(50% - 5px);
+	}
+	.actions {
+		@apply absolute -top-1 right-0;
+	}
+	.foot {
+		@apply pl-0;
+	}
+	.count,
+	.add {
+		@apply text-xsm;
+	}
+	.add > svg {
+		@apply w-4 h-4;
+	}
+}

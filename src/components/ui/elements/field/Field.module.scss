@@ -1,0 +1,25 @@
+.field {
+	@apply w-full;
+}
+.label {
+	@apply text-lg flex text-gray-300 mb-3;
+
+	> span {
+		@apply text-red-base;
+	}
+}
+.input {
+	@apply w-full h-14 px-5 border border-gray-220 bg-gray-50 outline-none;
+}
+
+@media (max-width: 800px) {
+	.field {
+		@apply text-xsm;
+	}
+	.label {
+		@apply text-xsm mb-2;
+	}
+	.input {
+		@apply h-10 px-4;
+	}
+}

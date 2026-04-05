@@ -1,0 +1,77 @@
+.wrapper,
+.example,
+.main {
+	@apply h-full;
+}
+.example {
+	@apply flex;
+	gap: 45px;
+}
+.main,
+.open {
+	@apply bg-gray-100;
+}
+.main {
+	min-width: 440px;
+	max-width: 440px;
+}
+.dots {
+	@apply flex flex-col justify-between;
+	min-width: 160px;
+	max-width: 160px;
+}
+.main,
+.open {
+	@apply flex items-end;
+
+	> img {
+		@apply image-like-bg-cover;
+	}
+}
+.open {
+	min-height: 210px;
+	max-height: 210px;
+}
+
+@media (max-width: 1600px) {
+	.main {
+		min-width: 360px;
+		max-width: 360px;
+	}
+	.dots {
+		min-width: 130px;
+		max-width: 130px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.example {
+		@apply gap-2.5 justify-center;
+	}
+	.main {
+		min-width: 290px;
+		max-width: 290px;
+		max-height: 440px;
+	}
+	.dots {
+		@apply justify-start gap-2.5;
+		min-width: 60px;
+		max-width: 60px;
+	}
+}
+
+@media (max-width: 800px) {
+	.example {
+		@apply items-end;
+		height: 285px;
+	}
+	.main {
+		min-width: 140px;
+    max-width: 140px;
+    max-height: 210px;
+	}
+	.dots {
+		min-width: 50px;
+		max-width: 50px;
+	}
+}

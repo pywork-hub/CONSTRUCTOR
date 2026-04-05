@@ -1,0 +1,27 @@
+.switch {
+	@apply relative bg-gray-200 rounded-full transition-colors;
+	width: 50px;
+	height: 26px;
+
+	&.checked {
+		@apply bg-red-base;
+
+		.point {
+			@apply -translate-x-full;
+			left: calc(100% - 4px);
+		}
+	}
+}
+.point {
+	@apply w-5 h-5 bg-white absolute left-1 top-0 bottom-0 my-auto rounded-full transition-all;
+}
+
+@media(max-width: 800px) {
+	.switch {
+		width: 34px;
+		height: 20px;
+	}
+	.point {
+		@apply w-3.5 h-3.5;
+	}
+}

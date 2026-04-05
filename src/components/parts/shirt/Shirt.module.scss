@@ -1,0 +1,18 @@
+.shirt {
+	@apply w-full border border-gray-200;
+
+	&.picked {
+		@apply border-red-base;
+	}
+}
+.fill {
+	@apply w-full flex items-center justify-center;
+
+	&.big {
+		padding: 3px;
+	}
+
+	&.small {
+		padding: 8px 3px;
+	}
+}

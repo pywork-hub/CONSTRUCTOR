@@ -1,0 +1,33 @@
+.share {
+	@apply mt-auto;
+}
+.text {
+	@apply mb-2;
+}
+.list {
+	@apply flex items-center gap-4;
+}
+
+@media (max-width: 1400px) {
+	.share {
+		@apply absolute;
+		bottom: -230px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.share {
+		bottom: 25px;
+		left: 25px;
+	}
+}
+
+@media (max-width: 800px) {
+	.share {
+		@apply w-full flex items-center justify-between left-0 right-0;
+		bottom: -60px;
+	}
+	.text {
+		@apply m-0;
+	}
+}

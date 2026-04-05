@@ -1,0 +1,11 @@
+.shorts {
+	@apply w-full border border-gray-200;
+
+	&.picked {
+		@apply border-red-base;
+	}
+}
+.fill {
+	@apply w-full flex items-center justify-center;
+	padding: 3px;
+}

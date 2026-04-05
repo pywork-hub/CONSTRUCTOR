@@ -1,0 +1,48 @@
+.select {
+	@apply relative w-full text-md;
+}
+.label {
+	@apply text-lg flex text-gray-300 mb-3;
+}
+.toggle {
+	@apply relative w-full h-14 flex items-center justify-between border border-gray-220 bg-gray-50 transition-colors;
+
+	> span {
+		@apply w-6 h-6 rounded-full;
+	}
+
+	> svg {
+		@apply min-w-7 max-w-7 min-h-7 max-h-7 ml-auto;
+		stroke-width: 1.5px;
+	}
+
+	&.picked {
+		@apply text-red-base;
+	}
+}
+.list {
+	@apply animate-fade w-full bg-white absolute left-0 right-0 z-1 border-x border-b border-gray-220 py-2.5 px-4 flex flex-wrap;
+	gap: 5px;
+}
+.item {
+	@apply w-full;
+	max-width: calc(50% - 2.5px);
+	padding: 5px 0;
+}
+.button {
+	> span {
+		@apply inline-block w-6 h-6 rounded-full;
+	}
+}
+
+@media (max-width: 800px) {
+	.select {
+		@apply text-xsm;
+	}
+	.toggle {
+		@apply h-10;
+	}
+	.label {
+		@apply text-xsm;
+	}
+}

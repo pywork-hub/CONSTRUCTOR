@@ -1,0 +1,13 @@
+.upload {
+	@apply text-red-base flex items-end gap-4 cursor-pointer;
+}
+
+@media (max-width: 800px) {
+	.upload {
+		@apply text-xsm gap-2.5;
+
+		> svg {
+			@apply w-4 h-4;
+		}
+	}
+}
